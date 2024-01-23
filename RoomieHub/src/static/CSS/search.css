@@ -1,0 +1,105 @@
+.cards {
+    padding-top: 30px;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.search-img7{
+    width: 300px;
+    height: 400px;
+}
+.card {
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+    margin: 30px;
+    display: inline-block;
+    height: 500px;
+    width: 300px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    transition: transform 0.2s ease-in-out;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+ 
+.navi-bar div:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+.container-search {
+    border-top-color: #f9004d;
+    border-top-style: solid;
+    border-top-width: 7px;
+}
+ 
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+ 
+.username-label,
+.year-label,
+.course-label,
+.gender-label,
+.preferred-hostel-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    
+}
+ 
+.username-textbox,
+.year-radio,
+.course-radio,
+.gender-radio,
+.preferred-hostel-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 20px;
+}
+ 
+.search-btn {
+    background-color: #f9004d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+ 
+.search-btn:hover {
+    background-color: #c70039;
+}
+ 
+.invalid-feedback {
+    color: #f9004d;
+    font-size: 14px;
+    margin-top: 5px;
+}

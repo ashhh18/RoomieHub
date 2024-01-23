@@ -1,0 +1,166 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size:cover;
+}
+
+.containerh {
+    border-top-color: #f9004d;
+    border-top-style: solid;
+    border-top-width: 7px;
+}
+.navi-bar-row{
+    display: flex;
+}
+.navi-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 100;
+    opacity: 0.8;
+    border-radius: 70%;
+    background-color: transparent;
+    right: 0px;
+    margin-right: 30px;
+    top: 0px;
+}
+
+
+.navi-bar div {
+    color: white;
+    flex: 1;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    padding: 10px;
+    opacity: 0.8;
+    margin-right: 10px;
+    padding: 15px;
+}
+
+.navi-bar div:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.fa,.head-css,.list-row{
+    color: white;
+}
+.list-row{
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.head-css{
+    text-decoration: none;
+}
+
+.drop-profile{
+    display: block;
+    
+}
+
+.overlay1 {
+    position: absolute;
+    overflow: hidden;
+    bottom: 1;
+    left:auto;
+    right: auto;
+    background-color: black;
+    width: 15%;
+    height: 0;
+    transition: 1s;
+    border-radius: 1000px;
+    opacity: 1 !important;
+}
+
+.list-content{
+    width: 170px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: block;
+}
+.your-profile{
+    display: block;
+    background-color: grey;
+    text-align: center;
+    width: 170px;
+}
+
+.list-row{
+    width: 170px;
+}
+
+#main:hover{
+    background-color: #f9004d;
+}
+.navi-bar:hover .overlay1{
+    bottom: 50;
+    height: 40%;
+    opacity: 1;
+}
+
+.followers-page-body{
+    display:flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.followers-details{
+    font-size: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 80px;
+    margin-left: 20px;
+    display: flex;
+    border: white solid 5px;
+    background-color: peachpuff;
+    align-items: center;
+    opacity: 0.8;
+}
+.followers-pic{
+    text-align: center;
+    border-right: white solid 5px;
+    flex: 1;
+}
+.followers-name{
+    text-align: center;
+    border-right: white solid 5px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    flex: 1;
+}
+.followers-hostel{
+    border-right: white solid 5px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+    flex: 1;
+}
+.followers-age{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    flex: 1;
+}
+.followers-image{
+    height:150px;
+}
+.search-container{
+    padding-left: 80px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+#search-input{
+    font-size: 20px;
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+#search-btn{
+    font-size: 20px;
+    height: 47px;
+}
+
+

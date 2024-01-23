@@ -1,0 +1,144 @@
+{% extends "Layouts/main-layout.html" %}
+
+<!-- Write all the css link tags inside the css block -->
+{% block css %}
+<link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/other-user.css') }}">
+<style>
+    .container-profile {
+        border-top-color: #f9004d;
+        border-top-style: solid;
+        border-top-width: 7px;
+    }
+
+    #jj{
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+</style>
+{%endblock css %}
+
+<!-- Write only the title(without the title tag inside the title block) -->
+{% block title %} User Profile - {{ user.username }} {% endblock title %}
+
+<!-- Write all the main body content inside the content block -->
+{% block content %}
+<div class="outer-box">
+    <div class="inner-card">
+        <div class="row others">
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='Media/profile_pictures/' + user.profile_photo) }}" alt="">
+            </div>
+            <div class="main-details">
+                <h1>{{ user.username }}<small>
+                    &NonBreakingSpace;(
+                    {% if user.gender == 'M' %}
+                        Male
+                    {% else %}
+                        Female
+                    {% endif %}
+                    )</small></h1>
+                <h2>{{ user.name }}</h2>
+                <h2>{{ user.email }}</h2>
+            </div>
+        </div>
+        <div class="other-details">
+            <div class="row">
+                <div class="batch">
+                    <h2>Batch:&NonBreakingSpace;&NonBreakingSpace;</h2>
+                    <h2>{{ user.year }}</h2>
+                </div>
+                <div class="course">
+                    <h2>Course:&NonBreakingSpace;&NonBreakingSpace;</h2>
+                    <h2>{{ user.course }}</h2>
+                </div>
+            </div>
+            <div class="side">
+            <div class="hostels">
+                <h1>Present Hostel:&NonBreakingSpace;&NonBreakingSpace;{{ user.present_hostel }}</h1>
+                <h1>Preferred Hostel:&NonBreakingSpace;&NonBreakingSpace;{{ user.preferred_hostel }}</h1>
+                <h1>About You:&NonBreakingSpace;&NonBreakingSpace;{{ user.content }}</h1>
+            </div>
+            <div class="others lifestyle-preferences">
+                &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+                LifeStyle Preferences: 
+                <ul>
+                    <li>
+                        Have Breakfast
+                        {% if user.have_breakfast == 'y' %}
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                        {% endif %}
+                    </li>
+                    <li>
+                        Exercise
+                        {% if user.exercise == 'y' %}
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                        {% endif %}
+                    </li>
+                    <li>
+                        Meditate
+                        {% if user.meditate == 'y' %}
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if user.intro_extro == "introvert" %}
+                            Introvert
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% else %}
+                            Extrovert
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% endif %}
+                    </li>
+                    <li>
+                        Smoke
+                        {% if user.smoke == 'y' %}
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                        {% endif %}
+                    </li>
+                    <li>
+                        Drink
+                        {% if user.drink == 'y' %}
+                            <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="btn-div">
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    &nbsp;
+    &nbsp;
+    <a href="{{ url_for('add_to_following', username=user.username) }}">
+        <button id="no-btn" class="swipe">
+            <p id="jj">Yes </p>
+            <span>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </span>
+        </button>
+    </a>
+</div>
+</div>
+{% endblock content %}
+
+<!-- Write all the script tags inside the js block -->
+{% block js %}
+
+{% endblock js %}

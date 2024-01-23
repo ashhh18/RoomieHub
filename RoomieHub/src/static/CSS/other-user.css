@@ -1,0 +1,250 @@
+.profile-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 150px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+small {
+    font-size: 30px;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.main-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.others {
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 5px;
+}
+
+.batch, .course {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 50%;
+    padding-left: 10px;
+    margin: 5px;
+    padding: 20px;
+}
+
+ul {
+    padding: 20px;
+    padding-left: 100px;
+    font-size: 40px;
+}
+
+.lifestyle-preferences {
+    font-size: 40px;
+    border-radius: 30px;
+    padding-top: 20px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 50%;
+    padding-left: 10px;
+    margin: 5px;
+    padding: 20px;
+}
+
+.hostels h1{
+    font-size: 30px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 40em;
+    padding-left: 10px;
+    margin: 5px;
+    padding: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.side {
+    display: flex;
+    flex-direction: row;
+}
+
+.no-following {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    height: 700px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding-left: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+
+
+.prefs h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    font-size: 100px;
+    width: 100%;
+}
+
+.no-following h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    font-size: 100px;
+    width: 100%;
+}
+
+.tick {
+    margin-left: 20px;
+    width: 35px;
+    height: 35px;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.swipe {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+    padding-left: 40px;
+    transition: 0.5s;
+}
+
+.swipe:hover {
+    padding-left: 0px;
+    padding-right: 40px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.swipe span {
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background: #04fe4d;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a191d;
+    font-size: 1.5em;
+}
+
+.swipe:hover span {
+    left: calc(100% - 55px);
+}
+
+.swipe1 {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+    padding-left: 0px;
+    transition: 0.5s;
+}
+
+.swipe1:hover {
+    padding-right: 0px;
+    padding-left: 40px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.swipe1 span {
+    position: absolute;
+    left: 145px;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a191d;
+    font-size: 1.5em;
+}
+
+.swipe1:hover span {
+    left: calc(100% - 193px);
+}
+
+.btn-div {
+    padding-top: 30px;
+    padding-left: 45%;
+    padding-bottom: 30px;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}

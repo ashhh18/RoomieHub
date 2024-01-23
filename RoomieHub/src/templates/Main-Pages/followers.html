@@ -1,0 +1,56 @@
+{% extends "Layouts/main-layout.html" %}
+
+<!-- Write all the css link tags inside the css block -->
+{% block css %}
+<link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/followers.css') }}">
+<style>
+    .container-followers {
+        border-top-color: #f9004d;
+        border-top-style: solid;
+        border-top-width: 7px;
+    }
+</style>
+{%endblock css %}
+
+<!-- Write only the title(without the title tag inside the title block) -->
+{% block title %} RoomieHub - Followers {% endblock title %}
+
+<!-- Write all the main body content inside the content block -->
+{% block content %}
+    {% if followers %}
+        <div class="block">
+            {% for user in followers %}
+            <div class="row">
+            <a href="{{ url_for('open_user_profile', username=user.username) }}" class="a-tag">
+                <div class="col">
+                <img src="{{ url_for('static', filename='Media/profile_pictures/' + user.profile_photo) }}" alt="" class="image">
+                </div>
+                <div class="col">
+                <h1>{{ user.name }}</h1>
+                <h2>{{ user.username }}</h2>
+                <h2>{{ user.preferred_hostel }}</h2>
+                </div>
+            </a>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="oops">
+            <img src="{{ url_for('static', filename='Media/oops.png') }}" alt="OOPS!">
+            <h1 class="oops-h1">OOPS! You don't have any followers yet!</h1>
+            <a href="{{ url_for('discover') }}">
+                <div class="dis-btn">
+                    Discover
+                </div>
+            </a>
+        </div>
+    {% endif %}
+{% endblock content %}
+
+<!-- Write all the script tags inside the js block -->
+{% block js %}
+
+{% endblock js %}

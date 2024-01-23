@@ -1,0 +1,118 @@
+.oops {
+    margin-left: 50px;
+    align-items: center;
+    width: 95%;
+    height: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+
+.dis-btn {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    background-color: #f9004d;
+    border-radius: 10px;
+}
+
+.oops img {
+    height: 300px;
+    width: 300px;
+}
+
+
+
+body {
+    background-image: url({{ url_for('static', filename='main_wp.jpg') }});
+    background-size: auto;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin-left: 50px;
+    width: 95%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.row:hover {
+    transform: scale(1.05)
+}
+
+.row:nth-child(odd) {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    transition: transform 0.2s ease-in-out;
+}
+
+.row:nth-child(even) {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 2px );
+}
+.a-tag {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h1, h2 {
+    padding-left: 20px;
+}
+
+.oops-h1 {
+    font-size: 50px;
+}
+
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }

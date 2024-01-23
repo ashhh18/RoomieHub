@@ -1,0 +1,44 @@
+{% extends "Layouts/main-layout.html" %}
+
+<!-- Write all the css link tags inside the css block -->
+{% block css %}
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/discover.css') }}">
+<style>
+  .container-discover {
+    border-top-color: #f9004d;
+    border-top-style: solid;
+    border-top-width: 7px;
+  }
+</style>
+{%endblock css %}
+
+<!-- Write only the title(without the title tag inside the title block) -->
+{% block title %} RoomieHub - Discover {% endblock title %}
+
+<!-- Write all the main body content inside the content block -->
+{% block content %}
+<div class="block">
+  {% for user in users %}
+  <div class="row">
+    <a href="{{ url_for('open_user_profile', username=user[2]) }}" class="a-tag">
+      <div class="col">
+        <img src="{{ url_for('static', filename='Media/profile_pictures/' + user[7]) }}" alt="" class="image">
+      </div>
+      <div class="col">
+        <h1>{{ user[1] }}</h1>
+        <h2>{{ user[2] }}</h2>
+        <h2>{{ user[15] }}</h2>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
+
+<!-- Write all the script tags inside the js block -->
+{% block js %}
+
+{% endblock js %}

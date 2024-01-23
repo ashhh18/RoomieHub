@@ -1,0 +1,176 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-check-input, .form-check-label {
+    margin-top: 20px;
+}
+
+.cnf-pass-label {
+    font-size: 20px;
+}
+
+.sign-in-div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sign-in-box {
+    font-size: 20px;
+    margin-left: 630px;
+    color: white;
+}
+
+.sign-in-a { 
+    text-decoration: none;
+    color: #f9004d;
+}
+.sign-in-a:visited { 
+    text-decoration: none;
+    color: #f9004d;
+ }
+ .sign-in-a:hover { 
+    text-decoration: none;
+    color: #f9004d;
+ }
+ .sign-in-a:focus { 
+    text-decoration: none;
+    color: #f9004d;
+ }
+ .sign-in-a:hover, .sign-in-a:active { 
+    text-decoration: none;
+    color: #f9004d;
+ }
+
+.cnf-password-textbox {
+    font-size: 20px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: black solid;
+    width: 200px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.navi-bar div:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.navi-bar:hover .overlay1 {
+    bottom: 50;
+    height: 40%;
+    opacity: 1;
+}
+  
+body {
+    overflow-x: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: static;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    padding-left: 42%;
+    height: 70px;
+    transition: all 0.4s ease-out;
+}
+.wrapper__links {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+.social-link--linkedin {
+    color: #2d76b0;
+}
+.social-link--github {
+    color: #000;
+}
+.social-link--instagram {
+    color: #9a2970;
+}
+.social-link .social-svg {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+.social-link .social-svg .social-group__icon {
+    fill: #191308;
+    transition: all 0.2s;
+}
+.social-link .social-svg .social-group__inner-circle {
+    fill: transparent;
+    transition: all 0.2s;
+}
+.social-link .social-svg .social-group__outline {
+    stroke: #191308;
+    transform-origin: 50% 50%;
+    transition: all 0.2s;
+}
+.social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
+    fill: #fffbfa;
+    transition: all 0.45s;
+}
+.social-link .social-svg:hover .social-group__inner-circle, .social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
+    fill: currentColor;
+    transition: all 0.45s;
+}
+.social-link .social-svg:hover .social-group__inner-circle--instagram, .social-link .social-svg:active .social-group__inner-circle--instagram, .social-link .social-svg:focus .social-group__inner-circle--instagram {
+    fill: url(#simpleInsta) !important;
+}
+.social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
+    stroke: currentColor;
+    transform: scale(1.1);
+    transition: all 0.45s;
+}
+
+.alert {
+    text-align: center;
+    position: absolute;
+    top: 350px;
+    left: 10%;
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.alert-success{
+    color: green;
+    border: green 2px solid;
+    background-color: rgba(0, 128, 0, 0.4);
+}
+
+.alert-danger{
+    color: red;
+    border: red 2px solid;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.alert-info {
+    color: blue;
+    border: blue 2px solid;
+    background-color: rgba(101, 144, 214, 0.59);
+}
+
+.container-home, .container-profile, .container-search, .container-discover, .container-about, .container-followers {
+    background-color: grey;
+}

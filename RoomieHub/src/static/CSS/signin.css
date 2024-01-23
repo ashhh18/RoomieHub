@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.form-container{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.signin-fieldset{
+    padding: 30px;
+    text-align: right;
+    background-color: white; 
+    border-radius: 10px;
+}
+.form-check{
+    display: flex;
+    justify-content:left;
+}
+.text-muted{
+    text-align: right;
+    flex:1;
+    justify-content: right;
+}
+.form-check-input{
+    display:1;
+}
+.form-check-label{
+    display:1;
+}
+.form-group{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.email-label{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.pass-label{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.email-textbox{
+    font-size: 20px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid black;
+}
+.password-textbox {
+    font-size: 20px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid black;
+    margin-bottom: 20px;
+}
+.signin-signup{
+    text-align: center;
+}
+.signUp-btn{
+    font-size: 20px;
+    background-image: linear-gradient(to right, #f9004d, #f690b1);
+    height: 40px;
+    width: 120px;
+    border-width:0px;
+    border-radius: 15px;
+}
+.signUp-btn:hover{
+    font-size: 20px;
+    background-image: linear-gradient(to bottom right, #f690b1, #f9004d);
+    border-radius: 15px;
+    border-width:0px;
+    cursor: pointer;
+}

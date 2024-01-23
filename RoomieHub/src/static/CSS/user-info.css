@@ -1,0 +1,299 @@
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 20px;
+    margin-right: 80px;
+}
+
+h1 {
+    font-size: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+small {
+    font-size: 30px;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.img-classs{
+    height: 600px;
+}
+
+.main-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.others {
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 5px;
+}
+
+.batch, .course {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 50%;
+    padding-left: 10px;
+    margin: 5px;
+    padding: 20px;
+}
+
+ul {
+    padding: 20px;
+    padding-left: 100px;
+    font-size: 40px;
+}
+
+.lifestyle-preferences {
+    font-size: 40px;
+    border-radius: 30px;
+    padding-top: 20px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 50%;
+    padding-left: 10px;
+    margin: 5px;
+    padding: 20px;
+}
+
+.hostels h1{
+    font-size: 30px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 40em;
+    padding-left: 10px;
+    margin: 5px;
+    padding: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.side {
+    display: flex;
+    flex-direction: row;
+}
+
+.no-following {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    height: 700px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding-left: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.prefs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    height: 700px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding-left: 10px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.preff {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.cover {
+    display: flex;
+    flex-direction: column;
+}
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.div3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.div4 {
+    position: absolute;
+    top: 630px;
+    right: 20px;
+    align-self: right;
+}
+
+.remove-link-div {
+    position: absolute;
+    right: 0;
+    margin-right: 0px;
+    width: 100px;
+    padding: 20px;
+    background-color: #ed4077d3;
+}
+
+.remove-link {
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    padding-right: 50px;
+}
+
+.no-following h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    font-size: 100px;
+    width: 100%;
+}
+
+.tick {
+    margin-left: 20px;
+    width: 35px;
+    height: 35px;
+}
+
+.update-link {
+    margin-top: 10px;
+    font-size: 25px;
+    width: 230px;
+    padding: 10px;
+    background-color: #f9004f87;
+    padding-left: 89px;
+}
+
+.update-link:hover {
+    background-color: #f9004d;
+}
+
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+.det {
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile-photo {
+    width: 550px;
+    height: 470px;
+}
+
+.container-profile {
+    border-top-color: #f9004d;
+    border-top-style: solid;
+    border-top-width: 7px;
+}
+.btn {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 25px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 30px;
+}

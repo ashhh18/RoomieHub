@@ -1,0 +1,151 @@
+{% extends "Layouts/main-layout.html" %}
+
+<!-- Write all the css link tags inside the css block -->
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/user-info.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+{%endblock css %}
+
+<!-- Write only the title(without the title tag inside the title block) -->
+{% block title %} RoomieHub - Info {% endblock title %}
+
+<!-- Write all the main body content inside the content block -->
+{% block content %}
+    <div class="outer-box">
+        <div class="inner-card">
+            <div class="row others">
+                <div class="profile-image">
+                    <img class="img-class" src="{{ url_for('static', filename='Media/profile_pictures/' + user.profile_photo) }}" alt="">
+                </div>
+                <div class="main-details">
+                    <h1>{{ user.username }}<small>
+                        &NonBreakingSpace;(
+                        {% if user.gender == 'M' %}
+                            Male
+                        {% else %}
+                            Female
+                        {% endif %}
+                        )</small></h1>
+                    <h2>{{ user.name }}</h2>
+                    <h2>{{ user.email }}</h2>
+                </div>
+            </div>
+            <div class="other-details">
+                <div class="row">
+                    <div class="batch">
+                        <h2>Batch:&NonBreakingSpace;&NonBreakingSpace;</h2>
+                        <h2>{{ user.year }}</h2>
+                    </div>
+                    <div class="course">
+                        <h2>Course:&NonBreakingSpace;&NonBreakingSpace;</h2>
+                        <h2>{{ user.course }}</h2>
+                    </div>
+                </div>
+                <div class="side">
+                <div class="hostels">
+                    <h1>Present Hostel:&NonBreakingSpace;&NonBreakingSpace;{{ user.present_hostel }}</h1>
+                    <h1>Preferred Hostel:&NonBreakingSpace;&NonBreakingSpace;{{ user.preferred_hostel }}</h1>
+                    <h1>About You: &NonBreakingSpace;&NonBreakingSpace;{{ user.content }}</h1>
+                </div>
+                <div class="others lifestyle-preferences">
+                    &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+                    LifeStyle Preferences: 
+                    <ul>
+                        <li>
+                            Have Breakfast
+                            {% if user.have_breakfast == 'y' %}
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                            {% endif %}
+                        </li>
+                        <li>
+                            Exercise
+                            {% if user.exercise == 'y' %}
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                            {% endif %}
+                        </li>
+                        <li>
+                            Meditate
+                            {% if user.meditate == 'y' %}
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if user.intro_extro == "introvert" %}
+                                Introvert
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% else %}
+                                Extrovert
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% endif %}
+                        </li>
+                        <li>
+                            Smoke
+                            {% if user.smoke == 'y' %}
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                            {% endif %}
+                        </li>
+                        <li>
+                            Drink
+                            {% if user.drink == 'y' %}
+                                <img src="{{ url_for('static', filename='Media/right.png') }}" alt="" class="tick">
+                            {% else %}
+                                <img src="{{ url_for('static', filename='Media/wrong.png') }}" alt="" class="tick">
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+                {% if preffs %}
+                    <div class="prefs">
+                        {% for p in preffs %}
+                        <a href="{{ url_for('open_user_profile', username=p.username) }}">
+                            <div class="preff">
+                                <img src="{{ url_for('static', filename='Media/profile_pictures/' + p.profile_photo) }}" alt="" class="profile-photo">
+                                <div class="cover">
+                                    <div class="div1">
+                                        <h1 class="det">{{ p.username }}</h1>
+                                    </div>
+                                    <div class="div2">
+                                        <div class="div3">
+                                            <h2 class="det">{{ p.name }}</h2>
+                                            <h3 class="det">{{ p.email }}</h3>
+                                            <h3 class="det">{{ p.year }}</h3>
+                                        </div>
+                                        <div class="div4">
+                                            <a class="btn btn-danger" href="{{ url_for('remove', username=p.username) }}">
+                                                <i class="fa fa-trash-o fa-lg"></i> Remove </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                        <div class="no-following">
+                            <h1>You do not follow anyone</h1>
+                        </div>
+                {% endif %}
+        </div>
+        <a href="{{ url_for('update') }}" class="update-btn-a">
+            <div class="update-link others">Update Info?</div>
+        </a>
+        <br>
+    </div>
+</div>
+{% endblock content %}
+
+<!-- Write all the script tags inside the js block -->
+{% block js %}
+
+{% endblock js %}

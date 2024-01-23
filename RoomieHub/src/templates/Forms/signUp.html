@@ -1,0 +1,286 @@
+{% extends "Layouts/form-layout.html" %}
+ 
+{% block css %}
+<link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/signin.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/header-footer.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/signup.css') }}">
+<style>
+    .container-search {
+        border-top-color: none;
+        border-top-style: none;
+        border-top-width: none;
+    }
+</style>
+{% endblock css %}
+ 
+{% block title %} Sign Up {% endblock title %}
+ 
+{% block content %}
+    <div class="form-container">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
+                <div class="form-group">
+                    {{ form.name.label(class="name-label") }}
+ 
+                    {% if form.name.errors %}
+                        {{ form.name(class="name-textbox is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="name-textbox") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.username.label(class="username-label") }}
+                    {% if form.username.errors %}
+                        {{ form.username(class="username-textbox is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="username-textbox") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="email-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="email-textbox is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="email-textbox") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.year.label(class="year-label") }}
+                    {% if form.year.errors %}
+                        {{ form.year(class="year-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.year.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.year(class="year-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.course.label(class="course-label") }}
+                    {% if form.course.errors %}
+                        {{ form.course(class="course-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.course.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.course(class="course-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.gender.label(class="gender-label") }}
+                    {% if form.gender.errors %}
+                        {{ form.gender(class="gender-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.gender.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.gender(class="gender-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.profile_photo.label(class="profile-photo-label") }}
+                    {{ form.profile_photo(class="form-control-file") }}
+                    {% if form.profile_photo.errors %}
+                        {% for error in form.profile_photo.errors %}
+                            <span class="text-danger">{{ error }}</span><br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.have_breakfast.label(class="have-breakfast-label") }}
+                    {% if form.have_breakfast.errors %}
+                        {{ form.have_breakfast(class="have-breakfast-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.have_breakfast.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.have_breakfast(class="have-breakfast-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.exercise.label(class="exercise-label") }}
+                    {% if form.exercise.errors %}
+                        {{ form.exercise(class="exercise-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.exercise.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.exercise(class="exercise-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.meditate.label(class="meditate-label") }}
+                    {% if form.meditate.errors %}
+                        {{ form.meditate(class="meditate-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.meditate.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.meditate(class="meditate-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.intro_extro.label(class="intro-extro-label") }}
+                    {% if form.intro_extro.errors %}
+                        {{ form.intro_extro(class="intro_extro-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.intro-extro.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.intro_extro(class="intro-extro-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.smoke.label(class="smoke-label") }}
+                    {% if form.smoke.errors %}
+                        {{ form.smoke(class="smoke-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.smoke.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.smoke(class="smoke-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.drink.label(class="drink-label") }}
+                    {% if form.drink.errors %}
+                        {{ form.drink(class="drink-radio is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.drink.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.drink(class="drink-radio") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.present_hostel.label(class="present-hostel-label") }}
+                    {% if form.present_hostel.errors %}
+                        {{ form.present_hostel(class="present_hostel-dropdown is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.present-hostel.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.present_hostel(class="present-hostel-dropdown") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.preferred_hostel.label(class="preferred-hostel-label") }}
+                    {% if form.preferred_hostel.errors %}
+                        {{ form.preferred_hostel(class="preferred_hostel-dropdown is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.preferred-hostel.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.preferred_hostel(class="preferred-hostel-dropdown") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.content.label(class="pass-label") }}
+                    {% if form.content.errors %}
+                        {{ form.content(class="content-textbox is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.content.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.content(class="content-textbox") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label(class="pass-label") }}
+                    {% if form.password.errors %}
+                        {{ form.password(class="password-textbox is-invalid password field") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="password-textbox password-field") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.confirm_password.label(class="cnf-pass-label") }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="cnf-password-textbox is-invalid password-field") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password(class="cnf-password-textbox password-field") }}
+                    {% endif %}
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="show-password">
+                        <label class="form-check-label" for="show-password">Show Password</label>
+                    </div>
+                </div>
+            <div class="form-group">
+                {{ form.submit(class="signUp-btn") }}
+            </div>
+        </form>
+    </div>
+    <div class='sign-in-div'>
+        <small class="text-muted sign-in-box">
+            Already have an Account?&NonBreakingSpace; <a href="{{ url_for('signInEmail') }}" class="sign-in-a">Sign In</a>
+        </small>
+    </div>
+{% endblock content %}
+ 
+{% block js %} 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-password').click(function() {
+                if ($(this).is(':checked')) {
+                    $('.password-field').attr('type', 'text');
+                } else {
+                    $('.password-field').attr('type', 'password');
+                }
+            });
+        });
+    </script>
+{% endblock js %}

@@ -1,0 +1,42 @@
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-div {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    border-radius: 60px;
+}
+
+.user-div img {
+    width: 300px;
+}
+
+input[type=submit] {
+    display: none;
+}
+
+input[type=text] {
+    display: none;
+}
+
+.details {
+    padding-top: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer-block {
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 50px 0 rgba( 0, 0, 0, 0.37);
+    backdrop-filter: blur( 10px ) saturate(1.5);
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 60px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

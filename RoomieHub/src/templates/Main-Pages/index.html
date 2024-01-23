@@ -1,0 +1,176 @@
+{% extends "Layouts/main-layout.html" %}
+
+<!-- Write all the css link tags inside the css block -->
+{% block css %}
+<link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<style>
+    .container-home {
+        border-top-color: #f9004d;
+        border-top-style: solid;
+        border-top-width: 7px;
+    }
+    .image {
+        width: 500px;
+        height: 500px;
+    }
+    .image-box {
+        padding-top: 20px;
+        height: 500px;
+    }
+    .suggestion {
+        background-color: #f9004f83;
+        font-size: 60px;
+        padding: 30px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+{%endblock css %}
+
+<!-- Write only the title(without the title tag inside the title block) -->
+{% block title %} RoomieHub - Home {% endblock title %}
+
+<!-- Write all the main body content inside the content block -->
+{% block content %}
+<div class="suggestion-div">
+    <p class="suggestion">
+        Suggestions !
+    </p>
+</div>
+
+<div class="box-cover">
+    {% for user in users %}
+    <a href="{{ url_for('open_user_profile', username=user[2]) }}">
+        <div class="box">
+            <div class="image-row">
+                <div class="image-box">
+                    <img class="image"
+                    src="{{ url_for('static', filename='Media/profile_pictures/' + user[7]) }}">
+                </div>
+            </div>
+
+            <div class="details">
+                <a class="info-artist">{{ user[1] }}</a>
+            </div>
+
+            <div class="more-info">
+                <p class="main-text">
+                    {{ user[4] }} {{ user[5] }}
+                </p>
+                <div class="overlay1">
+                    <div class="slide-text"> Details </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
+<div class="more-div">
+    <a class="more" href="{{ url_for('discover') }}">
+        <div class="discover-box1">
+            Discover>>
+        </div>
+    </a>
+</div>
+
+<div class="suggestion-div">
+    <p class="suggestion">
+        Hostels !
+    </p>
+</div>
+
+<div class="album-row">
+    <div class="first-pic">
+        <img class="album-pic"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bb/IIIT_Hyderabad_Old_Boys_Hostel.webp">
+    </div>
+
+    <div class="name">
+        <p class="album-name">
+            <a href="" style="color:white;text-decoration: none;">OBH</a>
+        </p>
+        <p class="total-songs">
+            4 Floors
+        </p>
+        <p class="time">
+            Boys
+        </p>
+    </div>
+</div>
+
+<div class="album-row">
+    <div class="first-pic">
+        <img class="album-pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/IIIT_hyderabad_Bakul_nivas_2.jpg/1200px-IIIT_hyderabad_Bakul_nivas_2.jpg
+            ">
+    </div>
+    <div class="name">
+        <p class="album-name">
+            <a href="" style="color:white;text-decoration: none;">Bakul Nivas</a>
+        </p>
+        <p class="total-songs">
+            5 Floors
+        </p>
+        <p class="time">
+            Boys
+        </p>
+    </div>
+</div>
+
+<div class="album-row">
+    <div class="first-pic">
+        <img class="album-pic"
+            src="https://content.jdmagicbox.com/comp/hyderabad/i2/040pxx40.xx40.180809190053.j3i2/catalogue/bakul-nivas-gachibowli-hyderabad-hostel-for-students-s3vqs9rprf.jpg">
+    </div>
+
+    <div class="name">
+        <p class="album-name">
+            <a href="" style="color:white;text-decoration: none;">NBH</a>
+        </p>
+        <p class="total-songs">
+            3 Floors
+        </p>
+        <p class="time">
+            Boys
+        </p>
+    </div>
+</div>
+
+<div class="album-row">
+    <div class="first-pic">
+        <img class="album-pic" src="https://www.iiit.ac.in/img/hostel1.png">
+    </div>
+
+    <div class="name">
+        <p class="album-name">
+            <a href="" style="color:white;text-decoration: none;">Parijat</a>
+        </p>
+        <p class="total-songs">
+            3 Floors
+        </p>
+        <p class="time">
+            Girls
+        </p>
+    </div>
+</div>
+
+<div class="overlay1">
+    <div class="your-profile">
+        <p class="drop-text">
+            Your Profile
+        </p>
+    </div>
+    <div class="logout">
+        <p class="drop-text">
+            Logout
+        </p>
+    </div>
+</div>
+{% endblock content %}
+
+<!-- Write all the script tags inside the js block -->
+{% block js %}
+
+{% endblock js %}

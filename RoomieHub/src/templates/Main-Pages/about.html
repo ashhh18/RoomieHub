@@ -1,0 +1,114 @@
+{% extends "Layouts/main-layout.html" %}
+
+<!-- Write all the css link tags inside the css block -->
+{% block css %}
+<link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/about.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:wght@200&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<style>
+    .container-about {
+        border-top-color: #f9004d;
+        border-top-style: solid;
+        border-top-width: 7px;
+    }
+</style>
+{%endblock css %}
+
+<!-- Write only the title(without the title tag inside the title block) -->
+{% block title %} RoomieHub - About {% endblock title %}
+
+<!-- Write all the main body content inside the content block -->
+{% block content %}
+
+<div class="outer-about-div">
+    <div class="headi">
+        <h1 class="heading">About Us</h1>
+    </div>
+    <div class="about-content">
+        <br><br><br><br><br><br><br><br>
+        <div class="about-text-div">
+            <p class="about-text">
+
+                Looking for a roommate can be a daunting task, but a website that functions like Tinder can make it much
+                easier.
+                With a swipe of a finger, you can find potential roommates in your area who match your lifestyle and
+                preferences. This platform allows you to set up a profile, input your interests, and search for
+                compatible
+                roommates based on their profiles.You can get to know them better before making any commitments. This
+                website
+                simplifies the roommate-finding process and increases your chances of finding a compatible roommate.
+
+            </p>
+        </div>
+
+        <div class="people">
+            <div class="song-row">
+                <div class="song-image">
+                    <img class="img-song" id="img-id1" src="{{ url_for('static', filename='Media/vinit.png') }}">
+                </div>
+                <div class="info">
+                    <p class="song-info-name" id="a1">
+                        Vinit Mehta
+                    </p>
+                    <p class="song-info-artist" id="b1">
+                        2022111001
+                    </p>
+                    <p class="song-info-artist" id="b3">
+                        vinit.mehta@research.iiit.ac.in
+                    </p>
+                </div>
+            </div>
+            <div class="song-row">
+                <div class="song-image">
+                    <img class="img-song" id="img-id2" src="{{ url_for('static', filename='Media/ashwin.png') }}">
+                </div>
+                <div class="info">
+                    <p class="song-info-name" id="a2">
+                        Ashwin Kumar
+                    </p>
+                    <p class="song-info-artist" id="b2">
+                        2022101091
+                    </p>
+                    <p class="song-info-artist" id="b3">
+                        ashwin.kumar@students.iiit.ac.in
+                    </p>
+                </div>
+            </div>
+            <div class="song-row">
+                <div class="song-image">
+                    <img class="img-song" id="img-id3" src="{{ url_for('static', filename='Media/tanay.png') }}">
+                </div>
+                <div class="info">
+                    <p class="song-info-name" id="a3">
+                        Tanay Gad
+                    </p>
+                    <p class="song-info-artist" id="b3">
+                        2022101043
+                    </p>
+                    <p class="song-info-artist" id="b3">
+                        tanay.gad@students.iiit.ac.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Write all the script tags inside the js block -->
+{% block js %}
+
+{% endblock js %}

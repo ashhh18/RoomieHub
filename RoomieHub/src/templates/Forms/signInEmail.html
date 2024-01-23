@@ -1,0 +1,87 @@
+{% extends "Layouts/form-layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/signin.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/header-footer.css') }}">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css') }}">
+
+<style>
+  footer {
+    margin-top: 200px;
+  }
+</style>
+
+{% endblock css %}
+
+{% block title %} Sign In {% endblock title %}
+
+{% block content %}
+<div class="form-container">
+  <form action="" method="POST" style="margin-top: 50px;">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+    <div class="signin-fieldset">
+      <div class="form-group">
+        {{ form.email.label(class="email-label") }}
+        {% if form.email.errors %}
+        {{ form.email(class="email-textbox is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.email.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{ form.email(class="email-textbox") }}
+        {% endif %}
+      </div>
+      <div class="form-group">
+        {{ form.password.label(class="pass-label") }}
+        {% if form.password.errors %}
+        {{ form.password(class="password-textbox is-invalid password-field") }}
+        <div class="invalid-feedback">
+          {% for error in form.password.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{ form.password(class="password-textbox password-field") }}
+        {% endif %}
+        <div class="form-check1">
+          <input type="checkbox" id="show-password">
+          <label class="form-check-label" for="show-password">Show Password</label>
+        </div>
+      </div>
+      <div class="signin-signup">
+        <div class="form-group">
+          {{ form.submit(class="signUp-btn") }}
+        </div>
+        <div>
+          <small class="text-muted">
+            New User? <a href="{{ url_for('signUp') }}">Sign Up</a>
+          </small>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+{% endblock content %}
+
+{% block js %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#show-password').click(function () {
+      if ($(this).is(':checked')) {
+        $('.password-field').attr('type', 'text');
+      } else {
+        $('.password-field').attr('type', 'password');
+      }
+    });
+  });
+</script>
+{% endblock js %}
